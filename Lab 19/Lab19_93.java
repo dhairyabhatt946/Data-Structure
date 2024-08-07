@@ -16,11 +16,10 @@ public class Lab19_93 {
             int key = arr[i];
             int j = i - 1;
             while(j >= 0 && arr[j] > key) {
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j+1] = arr[j];
                 j--;
             }
+            arr[j+1] = key;
             i++;
         }
     }
