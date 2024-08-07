@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Lab5_30 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] arr1 = new int[2][2];
+        int[][] arr2 = new int[2][2];
+        for(int i=0; i<2; i++) {
+            for(int j=0; j<2; j++) {
+                System.out.println("Enter an element at arr1["+i+"]["+j+"]: ");
+                arr1[i][j] = sc.nextInt();
+            }
+        }
+        for(int i=0; i<2; i++) {
+            for(int j=0; j<2; j++) {
+                System.out.println("Enter an element at arr2["+i+"]["+j+"]: ");
+                arr2[i][j] = sc.nextInt();
+            }
+        }
+        int[][] res = new int[2][2];
+        for(int i=0; i<2; i++) {
+            for(int j=0; j<2; j++) {
+                res[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        System.out.println("Sum of two matrices: ");
+        for(int i=0; i<2; i++) {
+            for(int j=0; j<2; j++) {
+                System.out.print(res[i][j]+" ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
