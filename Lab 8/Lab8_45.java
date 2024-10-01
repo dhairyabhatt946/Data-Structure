@@ -5,11 +5,11 @@ public class Lab8_45 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter infix");
         String infix = sc.next();
-        infix += ")";
         if(infix.length() == 0) {
             System.out.println("String is empty");
             return;
         }
+        infix += ")";
         Stack stack = new Stack(infix.length());
         stack.push('(');
         String polish = "";
